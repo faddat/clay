@@ -42,7 +42,7 @@ jobs:
           path: build/
 
       - name: Build clay.img
-        run: docker run --rm --privileged -v /dev:/dev -v ${PWD}:/build mkaczanowski/packer-builder-arm build clay/clay.json
+        run: docker run --rm --privileged -v /dev:/dev -v ${PWD}:/build mkaczanowski/packer-builder-arm build contrib/clay.json
 
       - name: Install PiShrink
         run: |
