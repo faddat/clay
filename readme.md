@@ -8,25 +8,23 @@ Jacob Gadikian wrote about clay quite a bit before kicking it off:
 [Baby Blockchains](https://github.com/regen-network/cosmosd/issues/17)
 [Clay](https://blurt.world/blurt/@jacobgadikian/clay)
 
-Clay will be considered feature-complete when:
+Clay will be considered "feature-complete" when:
 
-* it supports cosmovisor and the cosmos sdk upgrade module
-* it implements a simple blog platform with no reward pool concept
-* documentation for a secure, rsync or syncthing-based git-free genesis ceremony has been created
-* the genesis ceremony has been practiced
-* edge validation has been validated in a few practice rounds
-* a decision has been made on weather or not to use a ZeroTier Network
+[x] Clay's device images are automatically generated
+[ ] it supports cosmovisor and the cosmos sdk upgrade module
+[ ] it implements a simple blog platform with no reward pool concept
+[ ] documentation for a secure, rsync or syncthing-based git-free genesis ceremony has been created
+[ ] the genesis ceremony has been practiced
+[ ] edge validation has been validated in a few practice rounds
+[ ] a decision has been made on weather or not to use a ZeroTier Network
 
 Clay launches as soon as it is feature complete.
 
 
 ## Get started
 
-```
-starport serve
-```
-
-`serve` command installs dependencies, initializes and runs the application.
+[ ] Buy a 4GB Raspberry Pi and a 64GB MicroSD Card
+[ ] Public updates on https://blurt.world
 
 ## Configure
 
