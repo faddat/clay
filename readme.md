@@ -33,6 +33,20 @@ Clay launches as soon as it is feature complete.
 
 [ ] Public updates on https://blurt.world
 
+
+## How is clay made?
+
+For now, Clay is just a set of commands
+
+```bash
+starport app github.com/faddat/clay
+cd clay
+starport add wasm
+starport type post title body
+```
+
+It's made with the latest Starport.
+
 ## Configure
 
 Initialization parameters of your app are stored in `config.yml`.
