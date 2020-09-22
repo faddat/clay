@@ -49,18 +49,6 @@ starport type post title body
 
 It's made with the latest Starport from the development branch.
 
-## Configure
-
-Initialization parameters of your app are stored in `config.yml`.
-
-### `accounts`
-
-A list of user accounts created during genesis of your application.
-
-| Key   | Required | Type            | Description                                       |
-| ----- | -------- | --------------- | ------------------------------------------------- |
-| name  | Y        | String          | Local name of the key pair                        |
-| coins | Y        | List of Strings | Initial coins with denominations (e.g. "100coin") |
 
 ## Learn more
 
