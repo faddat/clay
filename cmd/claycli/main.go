@@ -25,6 +25,7 @@ import (
 
 	"github.com/faddat/clay/app"
   // this line is used by starport scaffolding
+	wasmrest "github.com/CosmWasm/wasmd/x/wasm/client/rest"
 )
 
 func main() {
@@ -142,6 +143,7 @@ func registerRoutes(rs *lcd.RestServer) {
 	authrest.RegisterTxRoutes(rs.CliCtx, rs.Mux)
 	app.ModuleBasics.RegisterRESTRoutes(rs.CliCtx, rs.Mux)
   // this line is used by starport scaffolding # 2
+	wasmrest.RegisterRoutes(rs.CliCtx, rs.Mux)
 }
 
 func initConfig(cmd *cobra.Command) error {
