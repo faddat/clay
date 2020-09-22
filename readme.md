@@ -10,21 +10,21 @@ Jacob Gadikian wrote about clay quite a bit before kicking it off:
 
 Clay will be considered "feature-complete" when:
 
-[x] Clay's device images are automatically generated
+* ~~Clay's device images are automatically generated~~
 
-[ ] it supports cosmovisor and the cosmos sdk upgrade module
+[ ] Clay supports cosmovisor and the cosmos sdk upgrade module
 
-[ ] it implements a simple blog platform with no reward pool concept
+[x] ~~Clay implements a simple blog platform with no reward pool concept~~
 
 [ ] documentation for a secure, rsync or syncthing-based git-free genesis ceremony has been created
 
 [ ] the genesis ceremony has been practiced
 
-[ ] edge validation has been validated in a few practice rounds
+[ ] edge validation has been demed safe in a few practice rounds
 
-[ ] a decision has been made on weather or not to use a ZeroTier Network
+ * ~~Zerotier is implemented~~
 
-Clay launches as soon as it is feature complete.
+Clay launches as soon as it is feature complete, probably the first week of October, 2020.
 
 
 ## Get started
@@ -34,7 +34,7 @@ Clay launches as soon as it is feature complete.
 [ ] Public updates on https://blurt.world
 
 
-## How is clay made?
+## How is [clay made](https://www.facebook.com/watch/?v=845703122288697)?
 
 For now, Clay is just a set of commands
 
@@ -45,7 +45,7 @@ starport add wasm
 starport type post title body
 ```
 
-It's made with the latest Starport.
+It's made with the latest Starport from the development branch.
 
 ## Configure
 
