@@ -26,6 +26,10 @@ import (
 	claykeeper "github.com/faddat/clay/x/clay/keeper"
 	claytypes "github.com/faddat/clay/x/clay/types"
   // this line is used by starport scaffolding
+	"path/filepath"
+	"github.com/CosmWasm/wasmd/x/wasm"
+	"github.com/tendermint/tendermint/libs/cli"
+	"github.com/spf13/viper"
 )
 
 const appName = "clay"
@@ -42,6 +46,7 @@ var (
 		supply.AppModuleBasic{},
 		clay.AppModuleBasic{},
     // this line is used by starport scaffolding # 2
+		wasm.AppModuleBasic{},
 	)
 
 	maccPerms = map[string][]string{
@@ -79,6 +84,7 @@ type NewApp struct {
 	paramsKeeper   params.Keeper
 	clayKeeper claykeeper.Keeper
   // this line is used by starport scaffolding # 3
+	wasmKeeper    wasm.Keeper
 	mm *module.Manager
 
 	sm *module.SimulationManager
@@ -104,6 +110,7 @@ func NewInitApp(
     params.StoreKey,
     claytypes.StoreKey,
     // this line is used by starport scaffolding # 5
+		wasm.StoreKey,
   )
 
 	tKeys := sdk.NewTransientStoreKeys(staking.TStoreKey, params.TStoreKey)
@@ -161,6 +168,20 @@ func NewInitApp(
 	)
 
   // this line is used by starport scaffolding # 4
+type WasmWrapper struct { Wasm wasm.WasmConfig `mapstructure:"wasm"`}
+	var wasmRouter = bApp.Router()
+	homeDir := viper.GetString(cli.HomeFlag)
+	wasmDir := filepath.Join(homeDir, "wasm")
+
+	wasmWrap := WasmWrapper{Wasm: wasm.DefaultWasmConfig()}
+	err := viper.Unmarshal(&wasmWrap)
+	if err != nil {
+		panic("error while reading wasm config: " + err.Error())
+	}
+	wasmConfig := wasmWrap.Wasm
+	supportedFeatures := "staking"
+	app.subspaces[wasm.ModuleName] = app.paramsKeeper.Subspace(wasm.DefaultParamspace)
+	app.wasmKeeper = wasm.NewKeeper(app.cdc, keys[wasm.StoreKey], app.subspaces[wasm.ModuleName], app.accountKeeper, app.bankKeeper, app.stakingKeeper, wasmRouter, wasmDir, wasmConfig, supportedFeatures, nil, nil)
 
 	app.mm = module.NewManager(
 		genutil.NewAppModule(app.accountKeeper, app.stakingKeeper, app.BaseApp.DeliverTx),
@@ -170,6 +191,7 @@ func NewInitApp(
 		clay.NewAppModule(app.clayKeeper, app.bankKeeper),
 		staking.NewAppModule(app.stakingKeeper, app.accountKeeper, app.supplyKeeper),
     // this line is used by starport scaffolding # 6
+		wasm.NewAppModule(app.wasmKeeper),
 	)
 
 	app.mm.SetOrderEndBlockers(staking.ModuleName)
@@ -182,6 +204,7 @@ func NewInitApp(
 		supply.ModuleName,
 		genutil.ModuleName,
     // this line is used by starport scaffolding # 7
+		wasm.ModuleName,
 	)
 
 	app.mm.RegisterRoutes(app.Router(), app.QueryRouter())
