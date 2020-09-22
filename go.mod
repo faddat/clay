@@ -3,6 +3,8 @@ module github.com/faddat/clay
 go 1.15
 
 require (
+	github.com/faddat/wasmd patch-1
+	github.com/faddat/go-cosmwasm lowercase
 	github.com/cosmos/cosmos-sdk v0.39.1
 	github.com/golang/mock v1.4.3 // indirect
 	github.com/google/uuid v1.0.0
