@@ -34,7 +34,7 @@ Clay launches as soon as it is feature complete, probably the first week of Octo
 
 
 
-## How is [clay made](https://www.facebook.com/watch/?v=845703122288697)?
+## How is [clay](https://www.youtube.com/watch?v=eMJk4y9NGvE) [made](https://www.facebook.com/watch/?v=845703122288697)?
 
 For now, Clay is just a set of commands
 
