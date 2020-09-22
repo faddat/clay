@@ -3,13 +3,13 @@ module github.com/faddat/clay
 go 1.15
 
 
-replace github.com/cosmwasm/wasmd => github.com/faddat/wasmd
-replace github.com/cosmwasm/go-cosmwasm => github.com/faddat/go-cosmwasm
+replace github.com/cosmwasm/wasmd => github.com/faddat/wasmd patch-1
+replace github.com/cosmwasm/go-cosmwasm => github.com/faddat/go-cosmwasm lowercase
 
 
 require (
-	github.com/cosmwasm/wasmd patch-1
-	github.com/cosmwasm/go-cosmwasm lowercase
+	github.com/cosmwasm/wasmd 
+	github.com/cosmwasm/go-cosmwasm 
 	github.com/cosmos/cosmos-sdk v0.39.1
 	github.com/golang/mock v1.4.3 // indirect
 	github.com/google/uuid v1.0.0
