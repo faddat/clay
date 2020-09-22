@@ -2,10 +2,12 @@
 
 **clay** is a blockchain application built using Cosmos SDK and Tendermint, generated with [Starport](https://github.com/tendermint/starport) and validated exclusively from embedded devices that live at the edge of the network.
 
-Jacob Gadikian wrote about clay quite a bit before kicking it off:
+Jacob Gadikian wrote about clay quite a bit, but did not always mention it by name:
 
 [Blockchain Application TCO](https://blurt.world/blurt/@jacobgadikian/blockchain-application-tco)
+
 [Baby Blockchains](https://github.com/regen-network/cosmosd/issues/17)
+
 [Clay](https://blurt.world/blurt/@jacobgadikian/clay)
 
 Clay will be considered "feature-complete" when:
