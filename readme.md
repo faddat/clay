@@ -71,6 +71,17 @@ starport add wasm
 starport type post title body
 ```
 
+
+## How can I start my own clay testnet?
+
+```
+clayd init --chain-id=belikewater testing
+clayd add-genesis-account validator 10000000token,100000000stake
+clayd gentx --name validator
+clayd collect-gentxs
+clayd start
+```
+
 It's made with the latest Starport from the development branch.
 
 
