@@ -12,26 +12,26 @@ Clay will be considered "feature-complete" when:
 
 * ~~Clay's device images are automatically generated~~
 
-[ ] Clay supports cosmovisor and the cosmos sdk upgrade module
+* ~~Zerotier is implemented~~
 
-[x] ~~Clay implements a simple blog platform with no reward pool concept~~
+* ~~Clay implements a simple blog platform with no reward pool concept~~
 
-[ ] documentation for a secure, rsync or syncthing-based git-free genesis ceremony has been created
+* Clay supports cosmovisor and the cosmos sdk upgrade module
 
-[ ] the genesis ceremony has been practiced
+* documentation for a secure, rsync or syncthing-based git-free genesis ceremony has been created
 
-[ ] edge validation has been demed safe in a few practice rounds
+* the genesis ceremony has been practiced
 
- * ~~Zerotier is implemented~~
+* edge validation has been demed safe in a few practice rounds
+
 
 Clay launches as soon as it is feature complete, probably the first week of October, 2020.
 
 
 ## Get started
 
-[ ] Buy a 4GB Raspberry Pi and a 64GB MicroSD Card
+* Buy a 4GB Raspberry Pi and a 64GB MicroSD Card
 
-[ ] Public updates on https://blurt.world
 
 
 ## How is [clay made](https://www.facebook.com/watch/?v=845703122288697)?
