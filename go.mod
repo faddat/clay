@@ -8,8 +8,8 @@ replace github.com/cosmwasm/go-cosmwasm => github.com/faddat/go-cosmwasm lowerca
 
 
 require (
-	github.com/cosmwasm/wasmd 
-	github.com/cosmwasm/go-cosmwasm 
+	github.com/cosmwasm/wasmd v0.1.0
+	github.com/cosmwasm/go-cosmwasm v0.1.0
 	github.com/cosmos/cosmos-sdk v0.39.1
 	github.com/golang/mock v1.4.3 // indirect
 	github.com/google/uuid v1.0.0
