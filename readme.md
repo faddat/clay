@@ -10,7 +10,7 @@ Jacob Gadikian wrote about clay quite a bit, but did not always mention it by na
 
 [Clay](https://blurt.world/blurt/@jacobgadikian/clay)
 
-Clay will be considered "feature-complete" when:
+**Clay will be considered "feature-complete" when:**
 
 * ~~Clay's device images are automatically generated~~
 
@@ -33,6 +33,30 @@ Clay launches as soon as it is feature complete, probably the first week of Octo
 ## Get started
 
 * Buy a 4GB Raspberry Pi and a 64GB MicroSD Card
+
+## Join the network and help test Zerotier and Edge Validation:
+
+* Although clay lives in my home, behind NAT, you can flash this device image to a 4gb Raspberry Pi 4:
+https://pipelines.actions.githubusercontent.com/ZqygT95s58v7khEXwqGaZvoZg8C8IkdFYs7rJs9pORZs6l1Uua/_apis/pipelines/1/runs/43/signedartifactscontent?artifactName=clay%20PI&urlExpires=2020-09-22T13%3A26%3A22.1855967Z&urlSigningMethod=HMACV1&urlSignature=pTo9nJSB5xcRu6IMbSDDez5PwSamg2wNISvB%2BauHNto%3D
+
+
+* Login as user ubuntu password ubuntu
+
+
+Install ZeroTier
+```
+curl -s https://install.zerotier.com | sudo bash
+```
+
+join the ZeroTier network
+```
+zerotier-cli join e4da7455b26d23be
+```
+
+this start command:
+```
+clayd start --p2p.persistent_peers 0cea9d958a6228ce0c5b1c6a6533a49a435a4948@172.24.32.183:26656
+```
 
 
 
