@@ -67,7 +67,6 @@ For now, Clay is just a set of commands
 ```bash
 starport app github.com/faddat/clay
 cd clay
-starport add wasm
 starport type post title body
 ```
 
