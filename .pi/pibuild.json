@@ -36,20 +36,9 @@
   }],
   "provisioners": [
     {
-      "type": "shell",
-      "inline": [
-        "touch /tmp/test"
-      ]
-    },
-    {
       "type": "file",
       "source": ".pi/clayd.service",
       "destination": "/etc/systemd/system/clayd.service"
-    },
-    {
-      "type": "file",
-      "source": ".pi/zt-gpg-key",
-      "destination": "/tmp/zt-gpg-key"
     },
     {
       "type": "file",
