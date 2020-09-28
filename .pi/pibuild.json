@@ -56,15 +56,15 @@
       "destination": "/usr/bin/claycli"
     },
     {
-          "type": "file",
-          "source": "vue/",
-          "destination": "vue/"
+      "type": "file",
+      "source": "vue/",
+      "destination": "vue/"
     },
     {
       "type": "shell",
       "inline": [
         "bash /tmp/image.bash",
-        "rm /tmp/zt-gpg-key /tmp/image.bash"
+        "rm /tmp/image.bash"
       ]
     }
   ],
