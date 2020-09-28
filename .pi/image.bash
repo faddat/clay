@@ -9,7 +9,7 @@ echo 'nameserver 8.8.8.8' > /etc/resolv.conf
 echo 'nameserver 1.1.1.1' >> /etc/resolv.conf
 apt update
 apt install -y curl wget jq apt-transport-https gnupg gnupg-agent software-properties-common
-apt-key add /tmp/zt-gpg-key
+curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import
 apt update
 apt install -y zerotier-one
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
