@@ -12,8 +12,7 @@ echo 'nameserver 1.1.1.1' >> /etc/resolv.conf
 echo "deb https://download.zerotier.com/debian/buster buster main" >/etc/apt/sources.list.d/zerotier.list
 apt update
 apt install -y curl wget jq apt-transport-https gnupg gnupg-agent software-properties-common
-curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import
-apt-key add 1657198823E52A61
+curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | apt-key add -
 apt update
 apt install -y zerotier-one
 
