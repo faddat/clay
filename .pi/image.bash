@@ -7,9 +7,9 @@ mv /etc/resolv.conf /etc/resolv.conf.bk
 echo "deb https://download.zerotier.com/debian/buster buster main" >/etc/apt/sources.list.d/zerotier.list
 echo 'nameserver 8.8.8.8' > /etc/resolv.conf
 echo 'nameserver 1.1.1.1' >> /etc/resolv.conf
-apt-key add /tmp/zt-gpg-key
 apt update
-apt install -y curl wget jq zerotier-one
+apt install -y curl wget jq zerotier-one apt-transport-https gnupg
+apt-key add /tmp/zt-gpg-key
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 chmod +x /usr/bin/clayd /usr/bin/claycli
 mkdir -p /clay/config
