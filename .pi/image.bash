@@ -9,12 +9,11 @@ echo 'nameserver 8.8.8.8' > /etc/resolv.conf
 echo 'nameserver 1.1.1.1' >> /etc/resolv.conf
 
 # Update packages and install Zerotier
-echo "deb https://download.zerotier.com/debian/buster buster main" >/etc/apt/sources.list.d/zerotier.list
 apt update
 apt install -y curl wget jq apt-transport-https gnupg gnupg-agent software-properties-common
-curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | apt-key add -
-apt update
-apt install -y zerotier-one
+wget http://download.zerotier.com/debian/buster/pool/main/z/zerotier-one/zerotier-one_1.4.6_arm64.deb
+dpkg -i zerotier-one_1.4.6_arm64.deb
+apt install -y
 
 # Set Up Clay
 chmod +x /usr/bin/clayd /usr/bin/claycli
