@@ -27,11 +27,11 @@ jobs:
 
       - name: Compile clay
         run: |
-        	cd cmd/clayd
-        	go build .
-        	cd ..
-        	cd claycli
-                go build .
+          cd cmd/clayd
+          go build .
+          cd ..
+          cd claycli
+          go build .
         env:
           GOOS: linux
           GOARCH: arm64
