@@ -31,7 +31,7 @@ jobs:
         	go build .
         	cd ..
         	cd claycli
-			go build .
+		go build .
         env:
           GOOS: linux
           GOARCH: arm64
@@ -42,8 +42,8 @@ jobs:
           name: claycli arm64
           path: cmd/claycli/claycli
 
-	  - name: Upload clay Arm64 daemon
-	    uses: actions/upload-artifact@v2
+      - name: Upload clay Arm64 daemon
+	uses: actions/upload-artifact@v2
         with:
           name: clayd arm64
           path: build/cmd/clayd/cmd/clayd
