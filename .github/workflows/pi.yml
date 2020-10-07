@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: clayd arm64
-          path: build/cmd/clayd/cmd/clayd
+          path: cmd/clayd/cmd/clayd
 
       - name: Build clay.img
         run: docker run --rm --privileged -v /dev:/dev -v ${PWD}:/build mkaczanowski/packer-builder-arm build .pi/pibuild.json
