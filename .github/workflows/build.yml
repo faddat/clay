@@ -27,12 +27,22 @@ jobs:
           GOOS: ${{ matrix.targetos }}
 
       - name: Compile
-        run: make
+        run: |
+          cd cmd/clayd
+          go build .
+          cd ..
+          cd claycli
+          go build .
 
       - uses: actions/upload-artifact@v2
         with:
-          name: clay ${{ matrix.targetos }}
-          path: build
+          name: clayd ${{ matrix.targetos }}
+          path: cmd/clayd/clayd
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: clayd ${{ matrix.targetos }}
+          path: cmd/claycli/claycli
 
   linux:
     runs-on: ubuntu-latest

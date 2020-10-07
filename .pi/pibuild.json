@@ -58,18 +58,18 @@
     },
     {
       "type": "file",
-      "source": "build/clayd",
+      "source": "cmd/clayd/clayd",
       "destination": "/usr/bin/clayd"
     },
     {
       "type": "file",
-      "source": "build/claycli",
+      "source": "cmd/claycli/claycli",
       "destination": "/usr/bin/claycli"
     },
     {
-          "type": "file",
-          "source": "vue/",
-          "destination": "vue/"
+	  "type": "file",
+	  "source": "vue/",
+	  "destination": "vue/"
     },
     {
       "type": "shell",
