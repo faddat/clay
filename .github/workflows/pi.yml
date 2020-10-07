@@ -31,7 +31,7 @@ jobs:
         	go build .
         	cd ..
         	cd claycli
-		go build .
+                go build .
         env:
           GOOS: linux
           GOARCH: arm64
