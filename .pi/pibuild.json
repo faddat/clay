@@ -40,6 +40,11 @@
       "source": ".pi/clayd.service",
       "destination": "/etc/systemd/system/clayd.service"
     },
+	{
+	  "type": "file",
+	  "source": ".pi/vue.service",
+	  "destination": "/etc/systemd/system/vue.service"
+	},
     {
       "type": "file",
       "source": ".pi/image.bash",
