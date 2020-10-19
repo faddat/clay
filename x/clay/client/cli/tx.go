@@ -23,6 +23,9 @@ func GetTxCmd(cdc *codec.Codec) *cobra.Command {
 
 	clayTxCmd.AddCommand(flags.PostCommands(
     // this line is used by starport scaffolding # 1
+		GetCmdCreatePost(cdc),
+		GetCmdSetPost(cdc),
+		GetCmdDeletePost(cdc),
 	)...)
 
 	return clayTxCmd
