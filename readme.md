@@ -18,6 +18,12 @@ Jacob Gadikian wrote about clay quite a bit, but did not always mention it by na
 
 * ~~Clay implements a simple blog platform with no reward pool concept~~
 
+* ~~Clay automatically loads a user interface~~
+
+* Clay joins its zerotier network automatically
+
+* Clay runs its UI and daemon as `clay` not root.
+
 * Clay supports cosmovisor and the cosmos sdk upgrade module
 
 * documentation for a secure, rsync or syncthing-based git-free genesis ceremony has been created
