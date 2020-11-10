@@ -20,20 +20,23 @@ Jacob Gadikian wrote about clay quite a bit, but did not always mention it by na
 
 * ~~Clay automatically loads a user interface~~
 
-* Clay joins its zerotier network automatically
+* ~~Clay joins its zerotier network automatically~~
 
 * Clay runs its UI and daemon as `clay` not root.
 
 * Clay supports cosmovisor and the cosmos sdk upgrade module
 
-* documentation for a secure, rsync or syncthing-based git-free genesis ceremony has been created
+* ~~documentation for a secure, rsync or syncthing-based git-free genesis ceremony has been created~~
+  * see: https://github.com/tendermint/spn
 
 * the genesis ceremony has been practiced
 
-* edge validation has been demed safe in a few practice rounds
+* ~~edge validation has been deemed effective in a few practice rounds~~
+
+* Security commentarry on edge validation and flat networks
 
 
-Clay launches as soon as it is feature complete, probably the first week of October, 2020.
+Clay launches as soon as it is feature complete.
 
 
 ## Get started
